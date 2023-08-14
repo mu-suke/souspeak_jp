@@ -1,0 +1,46 @@
+{
+  "name": "nextjs_template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint '{src,cypress}/**/*.{ts,tsx}' --fix",
+    "lint:precommit": "eslint '{src,cypress}/**/*.{ts,tsx}' --max-warnings 0",
+    "fmt": "prettier -w -l './**/*.{js,jsx,ts,tsx,json}'",
+    "fmt:precommit": "prettier -l './**/*.{js,jsx,ts,tsx,json}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": "npm run lint:precommit",
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss}": "npm run fmt:precommit"
+  },
+  "dependencies": {
+    "next": "13.4.13",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "8.44.2",
+    "@types/node": "18.17.5",
+    "@types/prettier": "2.7.3",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "@typescript-eslint/eslint-plugin": "6.3.0",
+    "@typescript-eslint/parser": "6.3.0",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.13",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-import": "2.28.0",
+    "husky": "8.0.3",
+    "lint-staged": "14.0.0",
+    "prettier": "3.0.1",
+    "typescript": "5.1.6"
+  }
+}
