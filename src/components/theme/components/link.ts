@@ -1,6 +1,6 @@
 export const Link = {
   baseStyle: {
-    color: 'system.black',
+    color: 'teal.600',
     transitionProperty: 'common',
     transitionDuration: 'fast',
     transitionTimingFunction: 'ease-out',
